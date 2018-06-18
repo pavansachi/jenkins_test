@@ -6,7 +6,7 @@ pipeline {
             steps {
                 echo 'Building..'
 
-                sh 'docker -v'
+                sh './scripts/run.sh'
             }
         }
         stage('Test') {
