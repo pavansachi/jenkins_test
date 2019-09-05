@@ -15,7 +15,7 @@ pipeline {
                     sh('git status')
                     sh('git commit -m "checking in version"')
                     sh('git branch')
-                    sh('git pull origin branch')
+                    sh('git pull origin master')
                     sh('git push -f origin master')
                 }
             }
