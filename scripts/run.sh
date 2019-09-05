@@ -3,4 +3,6 @@
 touch version.txt
 echo "1.0" > version.txt
 ls -l
+git add .
+git status
 echo "script is running"
