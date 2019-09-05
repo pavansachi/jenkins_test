@@ -5,8 +5,13 @@ pipeline {
         stage('Build') {
             steps {
                 echo 'Building..'
-
+                
                 sh './scripts/run.sh'
+                
+                sshagent (credentials: ['pavan-git']) {
+                    git branch
+                    git push origin master
+                }
             }
         }
         stage('Test') {
