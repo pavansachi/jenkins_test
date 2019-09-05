@@ -2,4 +2,5 @@
 
 touch version.txt
 echo "1.0" > version.txt
+ls -l
 echo "script is running"
