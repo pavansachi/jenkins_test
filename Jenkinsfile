@@ -9,8 +9,8 @@ pipeline {
                 sh './scripts/run.sh'
                 
                 sshagent (credentials: ['pavan-git']) {
-                    git branch
-                    git push origin master
+                    sh('git branch')
+                    sh('git push origin master')
                 }
             }
         }
