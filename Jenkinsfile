@@ -9,6 +9,11 @@ pipeline {
                 sh './scripts/run.sh'
                 
                 sshagent (credentials: ['pavan-git']) {
+                    sh('git config user.email "dev@github.com"')
+                    sh('git config user.name "Pavan"')
+                    sh('git add version.txt')
+                    sh('git status')
+                    sh('git commit -m "checking in version"')
                     sh('git branch')
                     sh('git push origin master')
                 }
