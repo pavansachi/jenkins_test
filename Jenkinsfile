@@ -33,7 +33,7 @@ pipeline {
     }
    post {
         always {
-            archiveArtifacts artifacts: 'scripts/*.txt', fingerprint: true
+            archiveArtifacts artifacts: '*.txt', fingerprint: true
         }
     }
 }
