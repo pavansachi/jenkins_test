@@ -17,7 +17,6 @@ pipeline {
                     sh('git branch')
                     sh('git fetch')
                     sh('git pull origin master')
-                    sh('git push -f origin master')
                 }
             }
         }
