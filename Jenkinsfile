@@ -30,10 +30,10 @@ pipeline {
                 echo 'Deploying....'
             }
         }
-        post {
-            always {
-                archiveArtifacts artifacts: 'scripts/*.txt', fingerprint: true
-            }
+    }
+   post {
+        always {
+            archiveArtifacts artifacts: 'scripts/*.txt', fingerprint: true
         }
     }
 }
